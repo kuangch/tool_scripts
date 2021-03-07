@@ -44,8 +44,11 @@ def gen_all_file_md5(dir_path):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-p', '--path', default='./', help='要计算md5值的路径或者文件')
-    args = parser.parse_args()
 
-    gen_all_file_md5(args.path)
+    import sys
+    dir = sys.argv[1]
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('-p', '--path', required=False, default='./', help='要计算md5值的路径或者文件')
+    # args = parser.parse_args()
+
+    gen_all_file_md5(dir)
